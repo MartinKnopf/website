@@ -1,0 +1,19 @@
+{
+	"version": 2,
+	"name": "flatbutton",
+	"alias": "flatbutton.co",
+	"builds": [
+		{ "src": "package.json", "use": "@now/static-build" },
+		{ "src": "tracking/index.js", "use": "@now/node" }
+	],
+  "env": {
+    "DBURI": "@dburi"
+  },
+	"routes": [
+		{ "src": "/privacy", "dest": "/privacy" },
+		{ "src": "/imprint", "dest": "/imprint" },
+		{ "src": "/fltbttn.js", "dest": "/tracking" },
+		{ "src": "/trackvmod", "dest": "/tracking" },
+		{ "src": "/t", "dest": "/tracking" }
+	]
+}

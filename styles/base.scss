@@ -1,0 +1,130 @@
+$bgcolor: #ffffff;
+$color: #292929;
+$footer-link-distance: 10px;
+$margin-top: 26px;
+$width: calc(100px * 4 + 40px);
+$break-one-col: 154px;
+$break-two-col: 308px;
+$break-nav: 280px;
+
+html {
+  height: 100%;
+}
+
+body {
+  padding: 0px 10px 20px 10px;
+  border: 0;
+  margin: auto;
+	max-width: $width;
+
+	display: flex;
+	flex-direction: column;
+
+  text-align: center;
+
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -os-text-size-adjust: none;
+  text-size-adjust: none;
+
+  background-color: $bgcolor;
+
+  color: $color;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.main {
+  margin: $margin-top auto 0 auto;
+  border: 0;
+}
+
+a {
+  color: $color;
+  text-decoration: none;
+}
+
+header {
+  margin-top: $margin-top;
+}
+
+.gp-icon {
+  margin: $margin-top auto 0 auto;
+  border-bottom: 1px solid #aaa;
+}
+
+.lp-logo {
+  margin: $margin-top auto 0px auto;
+  height: 44px;
+
+  a {
+
+    .logo {
+      width:  44px;
+      height: 44px;
+
+      box-shadow: 0 1px 1px 0 rgba(0,0,0,0.37);
+      transition: box-shadow 0.28s cubic-bezier(0.4,0,0.2,1);
+
+      &:hover {
+        box-shadow: 0 2px 1px 0 rgba(0,0,0,0.37);
+      }
+    }
+  }
+}
+
+.section-head {
+  margin: 0 auto $margin-top auto;
+}
+
+nav {
+	width: 100%;
+  margin: $margin-top auto 0px auto;
+  border: 0;
+
+	order: 0;
+
+	@media screen and (max-width: $break-nav) {
+		order: 1;
+	}
+
+  .link-stuff {
+
+    .links-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+			align-content: space-between;
+
+      a {
+        color: #292929;
+				width: calc(100% / 4 - 10px);
+
+				@media screen and (max-width: $break-nav) {
+					width: calc(100% / 1 - 10px);
+					padding: 10px 0;
+				}
+      }
+    }
+  }
+}
+
+footer {
+  margin: $margin-top auto 0 auto;
+  border: 0;
+	order: 99;
+}
+
+img {
+  &.unavailable {
+    opacity: 0.2;
+  }
+}
+
+.copyright {
+  color: #a0a0a0;
+}
