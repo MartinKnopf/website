@@ -1,23 +1,23 @@
 {
   "name": "flatbutton",
   "version": "1.0.0",
-  "description": "website of flat button",
+  "description": "flatbutton.co",
   "author": "Martin Knopf",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "scripts": {
     "now-build": "npm run build",
-    "build": "npm run clean && npm run dist && npm run build-landingpage && npm run build-privacy && npm run build-imprint && npm run sass && npm run copy-assets",
+    "build": "npm run clean && npm run prepare-dist && npm run mustache && npm run sass && npm run copy-assets",
     "clean": "rm -rf dist || true",
-    "dist": "mkdir dist && cd dist && mkdir privacy && mkdir imprint && cd ..",
+    "prepare-dist": "mkdir dist && cd dist && mkdir privacy && mkdir imprint && cd ..",
+    "mustache": "npm run build-landingpage && npm run build-privacy && npm run build-imprint",
     "build-landingpage": "mustache -p pages/index/content.mustache data.json index.mustache > dist/index.html",
     "build-privacy": "mustache -p pages/privacy/content.mustache data.json index.mustache > dist/privacy/index.html",
     "build-imprint": "mustache -p pages/imprint/content.mustache data.json index.mustache > dist/imprint/index.html",
     "sass": "sass styles/app.scss dist/style.css",
-    "copy-assets": "cp -R public/img public/robots.txt public/googlee424bbc37a76eea3.html dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "copy-assets": "cp -R public/img public/robots.txt public/googlee424bbc37a76eea3.html dist"
   },
   "dependencies": {
-    "mustache": "^3.0.1",
-    "sass": "^1.15.1"
+    "mustache": "^3.0.3",
+    "sass": "^1.22.11"
   }
 }
