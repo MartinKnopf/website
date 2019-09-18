@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "alias": ["www.flatbutton.co"],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "status": 301,
+      "headers": { "Location": "https://flatbutton.co/$1" }
+    }
+  ]
+}
