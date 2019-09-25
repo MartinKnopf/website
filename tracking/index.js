@@ -19,7 +19,7 @@ const routes = {
     if(query && query.app) {
       store('apps', { app: query.app, when: Date.now().toString() }, res)
     } else {
-      res.end('0')
+      res.end('-4')
     }
   }
 }
@@ -41,15 +41,15 @@ let store = (collName, row, res) => {
 
             res.end('1');
           } catch(e) {
-            res.end('0');
+            res.end('-3');
           }
         });
       } catch(e) {
-        res.end('0');
+        res.end('-2');
       }
     });
   } catch(e) {
-    res.end('0');
+    res.end('-1');
   }
 }
 
