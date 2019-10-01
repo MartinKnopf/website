@@ -1,8 +1,8 @@
 const { parse } = require('url')
 const MongoClient = require('mongodb').MongoClient;
 
-const DBURI = process.env.DBURI;
-const DBNAME = 'tracking';
+const DBURI = process.env.DBURI
+const DBNAME = 'tracking'
 
 const routes = {
   "/fltbttn.js": (req, res) => {
@@ -19,7 +19,7 @@ const routes = {
     if(query && query.app) {
       store('apps', { app: query.app, when: Date.now().toString() }, res)
     } else {
-      res.end('0')
+      res.end('-4')
     }
   }
 }
@@ -28,34 +28,36 @@ let store = (collName, row, res) => {
   try {
     MongoClient.connect(DBURI, (err, client) => {
       try {
-        if(err) throw err;
+        if(err) throw err
 
-        const db = client.db(DBNAME);
-        const collection = db.collection(collName);
+        const db = client.db(DBNAME)
+        const collection = db.collection(collName)
 
         collection.insertOne(row, (err, result) => {
-          if(err) throw err;
+          if(err) throw err
 
           try {
-            client.close();
+            client.close()
 
-            res.end('1');
+            res.end('1')
           } catch(e) {
-            res.end('0');
+            res.end('-3')
           }
         });
       } catch(e) {
-        res.end('0');
+        res.end('-2')
       }
     });
   } catch(e) {
-    res.end('0');
+    res.end('-1')
   }
 }
 
 module.exports = (req, res) => {
-  if(routes[req.url]) {
-    routes[req.url](req, res)
+  const route = parse(req.url).pathname
+
+  if(routes[route]) {
+    routes[route](req, res)
   } else {
     res.end('0')
   }
