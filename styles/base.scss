@@ -33,21 +33,29 @@ body {
   background-color: $bgcolor;
 
   color: $color;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 .main {
   margin: $margin-top auto 0 auto;
   border: 0;
+
+  div {
+    margin: $margin-top auto 0 auto;
+  }
+}
+
+h1 {
+  margin: 0;
+}
+
+.walloftext {
+  text-align: justify;
 }
 
 a {
   color: $color;
   text-decoration: none;
-}
-
-header {
-  margin-top: $margin-top;
 }
 
 .gp-icon {
@@ -91,6 +99,8 @@ nav {
 	}
 
   .link-stuff {
+
+    font-family: 'Hartwell Bold';
 
     .links-container {
       display: flex;

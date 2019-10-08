@@ -14,7 +14,7 @@
     "build-privacy": "mustache -p pages/privacy/content.mustache data.json index.mustache > dist/privacy/index.html",
     "build-imprint": "mustache -p pages/imprint/content.mustache data.json index.mustache > dist/imprint/index.html",
     "sass": "sass styles/app.scss dist/style.css",
-    "copy-assets": "cp -R public/img public/robots.txt public/googlee424bbc37a76eea3.html dist"
+    "copy-assets": "cp -R public/fonts public/img public/robots.txt public/googlee424bbc37a76eea3.html dist"
   },
   "dependencies": {
     "mustache": "^3.0.3",
