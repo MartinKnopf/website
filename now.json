@@ -13,6 +13,7 @@
 		{ "src": "/fltbttn.js", "dest": "/tracking" },
 		{ "src": "/trackvmod", "dest": "/tracking" },
 		{ "src": "/t", "dest": "/tracking" },
+		{ "src": "/stats", "dest": "/tracking" },
 		{ "src": "/(.*)", "dest": "/$1"}
 	]
 }
