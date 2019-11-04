@@ -22,12 +22,32 @@ const routes = {
       res.end('-4')
     }
   },
+  
+  "/uid": (req, res) => {
+    const { query } = parse(req.url, true)
+    
+    if(query && query.app && query.uid) {
+      store('apps', { app: query.app, uid: query.uid, when: Date.now().toString() }, res)
+    } else {
+      res.end('-4')
+    }
+  },
 
   "/stats": (req, res) => {
     const { query } = parse(req.url, true)
     
     if(query && query.app) {
-      getStats('apps', query.app, res)
+      getAppCount('apps', query.app, res)
+    } else {
+      res.end('-4')
+    }
+  },
+
+  "/uids": (req, res) => {
+    const { query } = parse(req.url, true)
+    
+    if(query && query.app) {
+      getUidCount('apps', query.app, res)
     } else {
       res.end('-4')
     }
@@ -63,7 +83,7 @@ let store = (collName, row, res) => {
   }
 }
 
-let getStats = (collName, app, res) => {
+let getAppCount = (collName, app, res) => {
   try {
     MongoClient.connect(DBURI, (err, client) => {
       try {
@@ -73,6 +93,26 @@ let getStats = (collName, app, res) => {
         const collection = db.collection(collName)
         collection.find({app: app}).count().then((count) => {
           res.end('' + count)
+        })
+      } catch(e) {
+        res.end('-2')
+      }
+    });
+  } catch(e) {
+    res.end('-1')
+  }
+}
+
+let getUidCount = (collName, app, res) => {
+  try {
+    MongoClient.connect(DBURI, (err, client) => {
+      try {
+        if(err) throw err
+
+        const db = client.db(DBNAME)
+        const collection = db.collection(collName)
+        collection.distinct('uid', {app: app}).then((docs) => {
+          res.end('' + docs.length)
         })
       } catch(e) {
         res.end('-2')
