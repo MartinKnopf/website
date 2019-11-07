@@ -14,7 +14,7 @@
    viewBox="0 0 744.09448819 1052.3622047"
    id="svg2"
    version="1.1"
-   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
    sodipodi:docname="logo.svg">
   <sodipodi:namedview
      id="base"
@@ -23,17 +23,17 @@
      borderopacity="1"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.99999999"
-     inkscape:cx="189.46541"
-     inkscape:cy="2594.0246"
+     inkscape:zoom="2"
+     inkscape:cx="-2918.6632"
+     inkscape:cy="3952.2525"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
-     inkscape:window-width="2048"
-     inkscape:window-height="1183"
-     inkscape:window-x="0"
-     inkscape:window-y="23"
-     inkscape:window-maximized="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
      showguides="false"
      inkscape:snap-global="false">
     <inkscape:grid
@@ -4530,6 +4530,8 @@
    inkscape:connector-curvature="0" />
 
 
+
+
  HEAD
     <path
    inkscape:connector-curvature="0"
@@ -4557,6 +4559,8 @@
    inkscape:export-filename="/Users/martin/Desktop/flat_button.png"
    inkscape:export-xdpi="548.96002"
    inkscape:export-ydpi="548.96002" />
+
+
 
 
 =======
@@ -4809,6 +4813,8 @@
    style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.25486743" />
 
 
+
+
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; 89de236181f0b7cac517a6895883351bd12848f3
   <rect
    style="opacity:1;fill:#f5f5f5;fill-opacity:1;stroke:none;stroke-width:3.54330707;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:9.44095707;stroke-opacity:1"
@@ -4820,5 +4826,123 @@
    inkscape:export-filename="/Users/martin/dev/website/public/fbassets/img/placeholder_144x144.png"
    inkscape:export-xdpi="57.43082"
    inkscape:export-ydpi="57.43082" />
+<text
+   id="text2411"
+   y="-2673.4041"
+   x="-2831.9626"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.5px;line-height:20.64999962;font-family:Multicolore;-inkscape-font-specification:Multicolore;letter-spacing:-0.26250005px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+   xml:space="preserve"><tspan
+     style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-family:Hartwell;-inkscape-font-specification:'Hartwell Ultra-Light';letter-spacing:-0.26250005px;stroke-width:0.9375"
+     y="-2673.4041"
+     x="-2831.9626"
+     id="tspan2409"
+     sodipodi:role="line">FLATBUTTON</tspan></text>
+<rect
+   style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.78872979;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+   id="rect1661"
+   width="234.00815"
+   height="43.089317"
+   x="-2844.5581"
+   y="-2577.0845" />
+<path
+   inkscape:connector-curvature="0"
+   id="path1630"
+   style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:medium;line-height:20.64999962;font-family:Hartwell;-inkscape-font-specification:'Hartwell Heavy';letter-spacing:0.9375px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.77165353;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+   d="m -2820.5826,-2568.0085 h -15.45 v 25.0125 h 6.2625 v -8.925 h 7.6875 l 0.525,-5.5875 h -8.2125 v -4.575 h 9.1875 z" />
+<path
+   inkscape:connector-curvature="0"
+   id="path1632"
+   style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:medium;line-height:20.64999962;font-family:Hartwell;-inkscape-font-specification:'Hartwell Heavy';letter-spacing:0.9375px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.77165353;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+   d="m -2810.1559,-2568.0085 h -6.2625 v 25.0125 h 14.8125 l 0.525,-5.775 h -9.075 z" />
+<path
+   inkscape:connector-curvature="0"
+   id="path1634"
+   style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:medium;line-height:20.64999962;font-family:Hartwell;-inkscape-font-specification:'Hartwell Heavy';letter-spacing:0.9375px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.77165353;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+   d="m -2775.967,-2542.996 -8.2875,-25.0125 h -7.275 l -8.325,25.0125 h 6.75 l 1.0875,-3.75 h 8.175 l 1.0875,3.75 z m -11.9625,-17.7375 2.625,9.0375 h -5.25 z" />
+<path
+   inkscape:connector-curvature="0"
+   id="path1636"
+   style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:medium;line-height:20.64999962;font-family:Hartwell;-inkscape-font-specification:'Hartwell Heavy';letter-spacing:0.9375px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.77165353;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+   d="m -2777.3106,-2568.0085 v 5.925 h 6.375 v 19.0875 h 6.2625 v -19.0875 h 5.7375 l 0.6375,-5.925 z" />
+<path
+   inkscape:connector-curvature="0"
+   id="path1638"
+   style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:medium;line-height:20.64999962;font-family:Hartwell;-inkscape-font-specification:'Hartwell Heavy';letter-spacing:0.9375px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.77165353;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+   d="m -2739.5246,-2555.9335 c 1.6875,-1.2375 2.55,-3 2.55,-5.325 0,-2.025 -0.7125,-3.6375 -2.175,-4.875 -1.425,-1.2375 -3.3375,-1.875 -5.7,-1.875 h -10.1625 v 25.0125 h 11.175 c 2.3625,0 4.2375,-0.6375 5.6625,-1.95 1.4625,-1.3125 2.175,-3 2.175,-5.1 0,-2.7375 -1.3125,-4.95 -3.525,-5.8875 z m -6.3375,-6.675 c 1.5375,0 2.625,0.825 2.625,2.1375 0,1.3125 -1.0875,2.2125 -2.625,2.2125 h -2.8875 v -4.35 z m -2.8875,14.175 v -4.7625 h 3.7125 c 1.6125,0 2.7,0.975 2.7,2.3625 0,1.3875 -1.05,2.4 -2.6625,2.4 z" />
+<path
+   inkscape:connector-curvature="0"
+   id="path1640"
+   style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:medium;line-height:20.64999962;font-family:Hartwell;-inkscape-font-specification:'Hartwell Heavy';letter-spacing:0.9375px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.77165353;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+   d="m -2732.1752,-2551.5085 c 0,2.7375 0.9,4.9125 2.7375,6.6 1.8375,1.6875 4.275,2.5125 7.275,2.5125 3,0 5.4,-0.825 7.2375,-2.5125 1.8375,-1.6875 2.775,-3.8625 2.775,-6.6 v -16.5 h -6.2625 v 15.5625 c 0,2.2125 -1.5,3.6375 -3.75,3.6375 -2.25,0 -3.75,-1.425 -3.75,-3.6375 v -15.5625 h -6.2625 z" />
+<path
+   inkscape:connector-curvature="0"
+   id="path1642"
+   style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:medium;line-height:20.64999962;font-family:Hartwell;-inkscape-font-specification:'Hartwell Heavy';letter-spacing:0.9375px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.77165353;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+   d="m -2708.8731,-2568.0085 v 5.925 h 6.375 v 19.0875 h 6.2625 v -19.0875 h 5.7375 l 0.6375,-5.925 z" />
+<path
+   inkscape:connector-curvature="0"
+   id="path1644"
+   style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:medium;line-height:20.64999962;font-family:Hartwell;-inkscape-font-specification:'Hartwell Heavy';letter-spacing:0.9375px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.77165353;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+   d="m -2688.5996,-2568.0085 v 5.925 h 6.375 v 19.0875 h 6.2625 v -19.0875 h 5.7375 l 0.6375,-5.925 z" />
+<path
+   inkscape:connector-curvature="0"
+   id="path1646"
+   style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:medium;line-height:20.64999962;font-family:Hartwell;-inkscape-font-specification:'Hartwell Heavy';letter-spacing:0.9375px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.77165353;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+   d="m -2655.6354,-2542.396 c 3.75,0 6.75,-1.2 9.0375,-3.6 2.2875,-2.4375 3.4125,-5.625 3.375,-9.5625 -0.038,-3.9375 -1.1625,-7.125 -3.45,-9.525 -2.2875,-2.4 -5.25,-3.6 -8.9625,-3.6 -3.7125,0 -6.675,1.2 -8.9625,3.6 -2.2875,2.4 -3.4125,5.5875 -3.4125,9.525 0,3.9375 1.125,7.125 3.4125,9.5625 2.2875,2.4 5.25,3.6 8.9625,3.6 z m 0.075,-6.1125 c -3.5625,0 -5.8875,-2.775 -5.8875,-6.975 0,-4.2375 2.325,-7.05 5.8875,-7.0875 3.45,-0.037 5.775,2.775 5.775,7.0875 0,4.2 -2.325,6.975 -5.775,6.975 z" />
+<path
+   inkscape:connector-curvature="0"
+   id="path1648"
+   style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:medium;line-height:20.64999962;font-family:Hartwell;-inkscape-font-specification:'Hartwell Heavy';letter-spacing:0.9375px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.77165353;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+   d="m -2625.3377,-2554.2835 -7.7625,-13.725 h -6.2625 v 25.0125 h 6.2625 v -13.6875 l 7.7625,13.6875 h 6.2625 v -25.0125 h -6.2625 z" />
+<path
+   inkscape:connector-curvature="0"
+   id="path1689"
+   style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-size:medium;line-height:20.64999962;font-family:Hartwell;-inkscape-font-specification:'Hartwell Ultra-Light';letter-spacing:-0.26250005px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+   d="m -2814.6376,-2646.7093 h -13.3875 v 25.0125 h 1.125 v -11.8125 h 11.55 l 0.1875,-1.05 h -11.7375 v -11.025 h 12.2625 z" />
+<path
+   inkscape:connector-curvature="0"
+   id="path1691"
+   style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-size:medium;line-height:20.64999962;font-family:Hartwell;-inkscape-font-specification:'Hartwell Ultra-Light';letter-spacing:-0.26250005px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+   d="m -2807.7535,-2646.7093 h -1.125 v 25.0125 h 13.05 l 0.1875,-1.05 h -12.1125 z" />
+<path
+   inkscape:connector-curvature="0"
+   id="path1693"
+   style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-size:medium;line-height:20.64999962;font-family:Hartwell;-inkscape-font-specification:'Hartwell Ultra-Light';letter-spacing:-0.26250005px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+   d="m -2774.4628,-2621.6968 -9.825,-25.0125 h -1.05 l -9.7875,25.0125 h 1.2375 l 2.475,-6.3375 h 13.2375 l 2.475,6.3375 z m -10.35,-23.325 6.1875,15.8625 h -12.375 z" />
+<path
+   inkscape:connector-curvature="0"
+   id="path1695"
+   style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-size:medium;line-height:20.64999962;font-family:Hartwell;-inkscape-font-specification:'Hartwell Ultra-Light';letter-spacing:-0.26250005px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+   d="m -2776.2716,-2646.7093 v 1.125 h 8.025 v 23.8875 h 1.125 v -23.8875 h 7.8 l 0.1875,-1.125 z" />
+<path
+   inkscape:connector-curvature="0"
+   id="path1697"
+   style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-size:medium;line-height:20.64999962;font-family:Hartwell;-inkscape-font-specification:'Hartwell Ultra-Light';letter-spacing:-0.26250005px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+   d="m -2742.388,-2634.9718 c 2.1,-0.9375 3.375,-3 3.375,-5.5125 0,-3.75 -2.7375,-6.225 -6.9,-6.225 h -9.1875 v 25.0125 h 9.9375 c 2.1375,0 3.9,-0.6375 5.2125,-1.9125 1.3125,-1.275 1.9875,-2.9625 1.9875,-5.025 0,-2.7375 -1.725,-5.175 -4.425,-6.3375 z m -3.525,-10.6125 c 3.3375,0 5.7,2.1 5.7,5.1 0,3.1125 -2.2875,5.25 -5.7,5.25 h -8.0625 v -10.35 z m -8.0625,22.7625 v -11.3625 h 8.7375 c 3.6,0 6.075,2.25 6.075,5.55 0,3.45 -2.4375,5.8125 -6,5.8125 z" />
+<path
+   inkscape:connector-curvature="0"
+   id="path1699"
+   style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-size:medium;line-height:20.64999962;font-family:Hartwell;-inkscape-font-specification:'Hartwell Ultra-Light';letter-spacing:-0.26250005px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+   d="m -2732.2185,-2630.1718 c 0,2.6625 0.825,4.8 2.4375,6.45 1.65,1.6125 3.7875,2.4375 6.45,2.4375 2.6625,0 4.8,-0.825 6.4125,-2.4375 1.65,-1.65 2.475,-3.7875 2.475,-6.45 v -16.5375 h -1.125 v 16.5375 c 0,2.2875 -0.7125,4.1625 -2.1375,5.5875 -1.425,1.3875 -3.3,2.1 -5.625,2.1 -2.325,0 -4.2,-0.7125 -5.625,-2.1 -1.425,-1.425 -2.1375,-3.3 -2.1375,-5.5875 v -16.5375 h -1.125 z" />
+<path
+   inkscape:connector-curvature="0"
+   id="path1701"
+   style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-size:medium;line-height:20.64999962;font-family:Hartwell;-inkscape-font-specification:'Hartwell Ultra-Light';letter-spacing:-0.26250005px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+   d="m -2710.4087,-2646.7093 v 1.125 h 8.025 v 23.8875 h 1.125 v -23.8875 h 7.8 l 0.1875,-1.125 z" />
+<path
+   inkscape:connector-curvature="0"
+   id="path1703"
+   style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-size:medium;line-height:20.64999962;font-family:Hartwell;-inkscape-font-specification:'Hartwell Ultra-Light';letter-spacing:-0.26250005px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+   d="m -2692.8001,-2646.7093 v 1.125 h 8.025 v 23.8875 h 1.125 v -23.8875 h 7.8 l 0.1875,-1.125 z" />
+<path
+   inkscape:connector-curvature="0"
+   id="path1705"
+   style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-size:medium;line-height:20.64999962;font-family:Hartwell;-inkscape-font-specification:'Hartwell Ultra-Light';letter-spacing:-0.26250005px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+   d="m -2662.5365,-2621.3218 c 3.525,0 6.375,-1.1625 8.5125,-3.525 2.1375,-2.3625 3.225,-5.5125 3.1875,-9.375 -0.037,-3.8625 -1.125,-6.9375 -3.2625,-9.3 -2.1375,-2.3625 -4.95,-3.5625 -8.4375,-3.5625 -3.4875,0 -6.3375,1.2 -8.475,3.5625 -2.1375,2.3625 -3.225,5.4375 -3.225,9.3 0,3.8625 1.0875,7.0125 3.225,9.375 2.1375,2.3625 4.9875,3.525 8.475,3.525 z m 10.5,-12.9 c 0,3.525 -0.975,6.375 -2.8875,8.55 -1.9125,2.1375 -4.4625,3.225 -7.6125,3.225 -3.15,0 -5.7,-1.0875 -7.6125,-3.225 -1.9125,-2.175 -2.8875,-5.025 -2.8875,-8.55 0,-3.4875 0.975,-6.3 2.8875,-8.4375 1.9125,-2.1375 4.4625,-3.2625 7.6125,-3.3 3.15,-0.037 5.7,1.05 7.6125,3.1875 1.9125,2.1375 2.8875,4.9875 2.8875,8.55 z" />
+<path
+   inkscape:connector-curvature="0"
+   id="path1707"
+   style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-size:medium;line-height:20.64999962;font-family:Hartwell;-inkscape-font-specification:'Hartwell Ultra-Light';letter-spacing:-0.26250005px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+   d="m -2628.3599,-2623.3843 -15.375,-23.325 h -1.35 v 25.0125 h 1.125 v -23.325 l 15.375,23.325 h 1.35 v -25.0125 h -1.125 z" />
 </g>
 </svg>
