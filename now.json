@@ -12,6 +12,7 @@
 		{ "src": "/fltbttn.js", "dest": "/tracking" },
 		{ "src": "/trackvmod", "dest": "/tracking" },
 		{ "src": "/t", "dest": "/tracking" },
+		{ "src": "/newuid", "dest": "/tracking" },
 		{ "src": "/uid", "dest": "/tracking" },
 		{ "src": "/uids", "dest": "/tracking" },
 		{ "src": "/stats", "dest": "/tracking" },

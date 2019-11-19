@@ -11,7 +11,8 @@
   "dependencies": {
     "ip": "^1.1.5",
     "lesspass-render-password": "^0.1.0",
-    "mongodb": "^3.1.9",
-    "request-ip": "2.1.3"
+    "mongodb": "^3.3.4",
+    "request-ip": "2.1.3",
+    "uuid": "^3.3.3"
   }
 }

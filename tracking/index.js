@@ -1,5 +1,6 @@
 const { parse } = require('url')
-const MongoClient = require('mongodb').MongoClient;
+const MongoClient = require('mongodb').MongoClient
+const uuidv1 = require('uuid/v1')
 
 const DBURI = process.env.DBURI
 const DBNAME = 'tracking'
@@ -23,6 +24,12 @@ const routes = {
     }
   },
   
+  // get a new timestamp based user id
+  "/newuid": (req, res) => {
+    res.end(uuidv1())
+  },
+  
+  // store uid for an app
   "/uid": (req, res) => {
     const { query } = parse(req.url, true)
     
@@ -33,6 +40,7 @@ const routes = {
     }
   },
 
+  // get number of documents with specific app
   "/stats": (req, res) => {
     const { query } = parse(req.url, true)
     
@@ -43,6 +51,7 @@ const routes = {
     }
   },
 
+  // get number of distinct user ids for a specific app
   "/uids": (req, res) => {
     const { query } = parse(req.url, true)
     
