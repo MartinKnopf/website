@@ -9,7 +9,18 @@
     "DBURI": "@dburi"
   },
 	"routes": [
-		{ "src": "/fltbttn.js", "dest": "/tracking" },
+		{ "src": "/(.*)", "continue": true, "headers" :
+        { "Access-Control-Allow-Origin": "https://flatbutton.co",
+          "X-Frame-Options": "DENY",
+          "X-XSS-Protection": "1; mode=block",
+          "Cache-Control": "no-cache",
+          "Cache-Control": "no-store",
+          "Cache-Control": "must-revalidate",
+          "Pragma": "no-cache",
+          "X-Content-Type-Options": "nosniff"
+        }
+    },
+    { "src": "/fltbttn.js", "dest": "/tracking" },
 		{ "src": "/trackvmod", "dest": "/tracking" },
 		{ "src": "/t", "dest": "/tracking" },
 		{ "src": "/newuid", "dest": "/tracking" },
@@ -17,44 +28,5 @@
 		{ "src": "/uids", "dest": "/tracking" },
 		{ "src": "/stats", "dest": "/tracking" },
 		{ "src": "/(.*)", "dest": "/$1"}
-	],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers" : [
-        {
-          "key" : "Access-Control-Allow-Origin",
-          "value" : "https://flatbutton.co"
-        },
-        {
-          "key" : "X-Frame-Options",
-          "value" : "DENY"
-        },
-        {
-          "key" : "X-XSS-Protection",
-          "value" : "1; mode=block"
-        },
-        {
-          "key" : "Cache-Control",
-          "value" : "no-cache"
-        },
-        {
-          "key" : "Cache-Control",
-          "value" : "no-store"
-        },
-        {
-          "key" : "Cache-Control",
-          "value" : "must-revalidate"
-        },
-        {
-          "key" : "Pragma",
-          "value" : "no-cache"
-        },
-        {
-          "key" : "X-Content-Type-Options",
-          "value" : "nosniff"
-        }
-      ]
-    }
-  ]
+	]
 }
