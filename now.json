@@ -18,7 +18,7 @@
           "X-Content-Type-Options": "nosniff"
         }
     },
-    { "src": "/fltbttn.js", "dest": "/tracking" },
+    { "src": "/fltbttn.js", "dest": "/tracking", "headers": { "Content-Type": "text/javascript" } },
 		{ "src": "/trackvmod", "dest": "/tracking" },
 		{ "src": "/t", "dest": "/tracking" },
 		{ "src": "/newuid", "dest": "/tracking" },
