@@ -2,3 +2,6 @@ node_modules
 dist
 tracking/node_modules
 .sass-cache
+pages/blog/build
+pages/blog/layouts/index.html
+pages/blog/layouts/post.html

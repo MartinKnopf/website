@@ -1,0 +1,36 @@
+html {
+  body {
+    .main.blog {
+      width: 100%;
+
+      .post {
+        &:first-child {
+          margin: 0;
+        }
+
+        width: 100%;
+
+        a {
+          width: 100%;
+
+          display: flex;
+          justify-content: space-between;
+
+          background-color: #eee;
+
+          &:hover {
+            background-color: #ccc;
+          }
+
+          .title {
+            margin-left: 5px;
+          }
+
+          .date {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}

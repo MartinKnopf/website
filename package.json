@@ -6,18 +6,34 @@
   "license": "MIT",
   "scripts": {
     "now-build": "npm run build",
-    "build": "npm run clean && npm run prepare-dist && npm run mustache && npm run sass && npm run copy-assets",
+    "build": "npm run clean && npm run prepare-dist && npm run mustache && npm run build-blog && npm run sass && npm run copy-assets",
+
     "clean": "rm -rf dist || true",
-    "prepare-dist": "mkdir dist && cd dist && mkdir privacy && mkdir imprint && mkdir dashboard && cd ..",
+    "prepare-dist": "mkdir dist && cd dist && mkdir privacy && mkdir imprint && mkdir dashboard && mkdir blog && cd ..",
+
     "mustache": "npm run build-landingpage && npm run build-privacy && npm run build-imprint && npm run build-dashboard",
     "build-landingpage": "mustache -p pages/index/content.mustache data.json index.mustache > dist/index.html",
-    "build-privacy": "mustache -p pages/privacy/content.mustache data.json index.mustache > dist/privacy/index.html",
-    "build-imprint": "mustache -p pages/imprint/content.mustache data.json index.mustache > dist/imprint/index.html",
+    "build-privacy": "mustache -p pages/privacy/content.mustache no-tracking-data.json index.mustache > dist/privacy/index.html",
+    "build-imprint": "mustache -p pages/imprint/content.mustache no-tracking-data.json index.mustache > dist/imprint/index.html",
     "build-dashboard": "mustache -p pages/dashboard/content.mustache no-tracking-data.json index.mustache > dist/dashboard/index.html",
+
+    "build-blog": "npm run prepare-overview-layout && npm run prepare-post-layout && npm run build-blog-sites",
+    "prepare-overview-layout": "mustache -p pages/blog/layouts/index/content.mustache no-tracking-data.json index.mustache > pages/blog/layouts/index.html",
+    "prepare-post-layout": "mustache -p pages/blog/layouts/post/content.mustache no-tracking-data.json index.mustache > pages/blog/layouts/post.html",
+    "build-blog-sites": "node build-blog.js && cp -R pages/blog/build/* dist/blog",
+
     "sass": "sass styles/app.scss dist/style.css",
+
     "copy-assets": "cp -R public/fonts public/img public/robots.txt public/googlee424bbc37a76eea3.html dist"
   },
   "dependencies": {
+    "handlebars": "^4.0.5",
+    "handlebars-intl": "^1.1.2",
+    "metalsmith": "^2.3.0",
+    "metalsmith-collections": "^0.9.0",
+    "metalsmith-layouts": "^1.4.1",
+    "metalsmith-markdown": "^0.2.1",
+    "metalsmith-permalinks": "^0.5.0",
     "mustache": "^3.0.3",
     "sass": "^1.22.10"
   }

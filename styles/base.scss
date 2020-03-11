@@ -107,12 +107,9 @@ nav {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
-      align-items: center;
-			align-content: space-between;
 
       a {
         color: #292929;
-				width: calc(100% / 4 - 10px);
 
 				@media screen and (max-width: $break-nav) {
 					width: calc(100% / 1 - 10px);
