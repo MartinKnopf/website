@@ -1,7 +1,7 @@
 {{=<% %>=}}
 <div class="main blog">
   {{#each posts }}
-  <div class="post"><a href="{{ path }}"><span class="title">{{ title }}</span><span class="date">{{ formatDate date day="numeric" month="long" year="numeric" }}</span> 
+  <div class="post"><a href="/blog/{{ path }}"><span class="title">{{ title }}</span><span class="date">{{ formatDate date day="numeric" month="long" year="numeric" }}</span> 
   {{/each}}
 </div>
 <%={{ }}=%>
