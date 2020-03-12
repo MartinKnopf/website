@@ -4,13 +4,13 @@ date: 2020-03-12
 layout: post.html
 ---
 <style>
-img[alt$=-teaser] {
+.teaser {
   width: 300px !important;
 }
 </style>
 
-![swipp -teaser](/img/swipp-teaser.gif "Swipp!")
+<img class="teaser" src="/img/swipp-teaser.gif" alt="swipp teaser"/>
 
-Shove some cubes around
+Shove cubes around. Use their environment. And sometimes avoid it.
 
 Release date: Hopefully May 2020
