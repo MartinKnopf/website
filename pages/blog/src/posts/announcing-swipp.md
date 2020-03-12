@@ -9,7 +9,7 @@ img[alt$=-teaser] {
 }
 </style>
 
-![swipp teaser](/img/swipp-teaser.gif "Swipp!")
+![swipp -teaser](/img/swipp-teaser.gif "Swipp!")
 
 Shove some cubes around
 
