@@ -5,7 +5,7 @@ layout: post.html
 ---
 <style>
 img[alt$=-teaser] {
-  max-width: 320px;
+  max-width: 300px !important;
 }
 </style>
 
