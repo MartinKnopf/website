@@ -1,6 +1,12 @@
 html {
   body {
     .main.post {
+      max-width: 100%;
+
+      * {
+        max-width: 100%;
+      }
+
       .date {
         margin-top: 0;
 
