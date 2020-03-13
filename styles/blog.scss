@@ -14,21 +14,27 @@ html {
         a {
           width: 100%;
 
-          display: flex;
-          justify-content: space-between;
-
           background-color: #f5f5f5;
 
           &:hover {
             background-color: #e5e5e5;
           }
-
-          .title {
-            margin-left: 5px;
+      
+          h1 {
+            text-align: center;
+            
+            font-family: 'Hartwell Bold';
+            font-weight: bold;
           }
 
           .date {
-            margin-right: 5px;
+            margin-top: 0;
+            
+            text-align: center;
+
+            font-family: 'Hartwell Bold';
+            font-weight: bold;
+            color: #a0a0a0;
           }
         }
       }

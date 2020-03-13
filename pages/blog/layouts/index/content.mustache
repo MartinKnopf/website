@@ -2,7 +2,11 @@
 <div class="main blog">
   {{#each posts }}
     {{^draft}}
-    <div class="post"><a href="/blog/{{ path }}"><span class="title">{{ title }}</span><span class="date">{{ formatDate date day="numeric" month="long" year="numeric" }}</span></a>
+    <div class="post">
+      <a href="/blog/{{ path }}">
+        <h1>{{ title }}</h1>
+        <div class="date">{{ formatDate date day="numeric" month="long" year="numeric" }}</div>
+      </a>
     </div>
     {{/draft}}
   {{/each}}
