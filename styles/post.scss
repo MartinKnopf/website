@@ -7,6 +7,10 @@ html {
       
       font-family: 'Hartwell', sans-serif;
       text-align: left;
+      
+      &.centered {
+        text-align: center;
+      }
 
       * {
         max-width: 100%;
@@ -14,6 +18,9 @@ html {
       
       h1 {
         text-align: center;
+        
+        font-family: 'Hartwell Bold';
+        font-weight: bold;
       }
 
       .date {
@@ -21,6 +28,8 @@ html {
         
         text-align: center;
 
+        font-family: 'Hartwell Bold';
+        font-weight: bold;
         color: #a0a0a0;
       }
 
