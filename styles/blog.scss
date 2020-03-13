@@ -1,7 +1,8 @@
 html {
   body {
     .main.blog {
-      width: 100%;
+	    width: $width;
+      max-width: 100%;
 
       .post {
         &:first-child {

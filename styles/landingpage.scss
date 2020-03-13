@@ -4,6 +4,9 @@ html {
   body {
     .main.landing-page {
     
+      width: $width;
+      max-width: 100%;
+    
       .games {
         margin: 0 auto 0 auto;
         padding: 0;

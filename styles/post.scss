@@ -1,7 +1,12 @@
 html {
   body {
     .main.post {
+    
+      width: 610px;
       max-width: 100%;
+      
+      font-family: 'Hartwell', sans-serif;
+      text-align: left;
 
       * {
         max-width: 100%;

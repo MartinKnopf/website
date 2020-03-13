@@ -1,9 +1,11 @@
 html {
   body {
     .main {
-      font-weight: 500;
-			max-width: $width;
+      width: $width;
+      max-width: 100%;
+      
 			text-align: justify;
+      font-weight: 500;
 
 			header {
 				text-align: center;
