@@ -11,9 +11,15 @@ html {
       * {
         max-width: 100%;
       }
+      
+      h1 {
+        text-align: center;
+      }
 
       .date {
         margin-top: 0;
+        
+        text-align: center;
 
         color: #a0a0a0;
       }
