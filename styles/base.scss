@@ -16,6 +16,7 @@ body {
   border: 0;
   margin: auto;
   $max-width: calc(100% - 12px);
+  min-height: 100vh;
 
 	display: flex;
 	flex-direction: column;
@@ -37,6 +38,7 @@ body {
 }
 
 .main {
+  flex: 1; // let main take all available space so footer can stick to the bottom
   margin: $margin-top auto 0 auto;
   border: 0;
 
@@ -50,8 +52,28 @@ h1 {
 }
 
 .walloftext {
-  width: $width;
-  text-align: justify;
+  width: 610px;
+  max-width: 100%;
+  text-align: left;
+
+  h1 {
+    text-align: center;
+  }
+
+  h2 {
+    margin: $margin-top auto 0 auto;
+  }
+  
+  div {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .content {
+    margin: $margin-top auto 0 auto;
+  }
 }
 
 a {
@@ -123,7 +145,7 @@ nav {
 }
 
 footer {
-  margin: $margin-top auto 0 auto;
+  margin: $margin-top auto $margin-top auto;
   border: 0;
 	order: 99;
 }
