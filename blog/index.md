@@ -1,3 +1,3 @@
 ---
-layout: blogg.html
+layout: blog.html
 ---

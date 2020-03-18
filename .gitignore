@@ -3,6 +3,3 @@ node_modules/
 *.un~
 .DS_Store
 .sass-cache/
-pages/blog/build/
-pages/blog/layouts/index.html
-pages/blog/layouts/post.html
