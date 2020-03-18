@@ -64,15 +64,11 @@ h1 {
     margin: $margin-top auto 0 auto;
   }
   
-  div {
-    margin: 0;
+  p {
+    margin: $margin-top auto 0 auto;
     font-family: 'Lato', sans-serif;
     font-size: 16px;
     line-height: 20px;
-  }
-
-  .content {
-    margin: $margin-top auto 0 auto;
   }
 }
 
@@ -111,7 +107,7 @@ a {
 }
 
 nav {
-	width: $width;
+	width: 430px;
   max-width: 100%;
   margin: $margin-top auto 0px auto;
   border: 0;

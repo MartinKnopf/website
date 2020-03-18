@@ -1,23 +1,31 @@
+var fs = require('fs');
 var path = require('path');
+var Handlebars     = require('handlebars');
 var Metalsmith  = require('metalsmith');
 var markdown    = require('metalsmith-markdown');
 var layouts     = require('metalsmith-layouts');
 var permalinks  = require('metalsmith-permalinks');
 var collections = require('metalsmith-collections');
-var Handlebars     = require('handlebars');
 var HandlebarsIntl = require('handlebars-intl');
 
 HandlebarsIntl.registerWith(Handlebars);
 
-Metalsmith(path.join(__dirname, '/pages/blog'))
-  .metadata({
-    title: "flatbutton blog",
-    description: "news, how-tos",
-    generator: "Metalsmith",
-    url: "https://flatbutton.co"
-  })
-  .source('./src')
-  .destination('./build')
+Metalsmith(__dirname)
+  .source('./pages')
+  .destination('./dist')
+  .clean(true)
+  .use(markdown())
+  .use(permalinks())
+  .use(layouts({
+    engine: 'handlebars'
+  }))
+  .build(function(err, files) {
+    if (err) { throw err; }
+  });
+
+Metalsmith(__dirname)
+  .source('./blog')
+  .destination('./dist/blog')
   .clean(false)
   .use(collections({
     posts: {
@@ -29,7 +37,8 @@ Metalsmith(path.join(__dirname, '/pages/blog'))
   .use(markdown())
   .use(permalinks())
   .use(layouts({
-    engine: 'handlebars'
+    engine: 'handlebars',
+    directory: 'layouts'
   }))
   .build(function(err, files) {
     if (err) { throw err; }
