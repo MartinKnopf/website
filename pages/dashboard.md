@@ -2,8 +2,8 @@
 layout: index.html
 ---
 <div class="main">
-  <span>Boolitaire installations:</span>&nbsp;<span id="boolitaire-installation" />
-  <span>Swipp! installations:</span>&nbsp;<span id="swipp-installation" />
+<div>Boolitaire installations:&nbsp;<span id="boolitaire-installation"></span></div>
+<div>Swipp! installations:&nbsp;<span id="swipp!-installation"></span></div>
 </div>
 
 <script>
@@ -16,5 +16,5 @@ layout: index.html
     }
   }
   request('boolitaire-installation')
-  request('swipp-installation')
+  request('swipp!-installation')
 </script>

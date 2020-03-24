@@ -1,6 +1,5 @@
 {
 	"version": 2,
-	"name": "flatbutton",
 	"builds": [
 		{ "src": "package.json", "use": "@now/static-build" },
 		{ "src": "tracking/index.js", "use": "@now/node" }
