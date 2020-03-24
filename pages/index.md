@@ -5,7 +5,7 @@ tracking: true
 ---
 <div class="games">
 <div class="game">
-<a href="/blog/posts/announcing-swipp"><img class="game-teaser" src="/img/swipp-icon-1024x1024.png"/><span class="new-marker">NEW</span></a>
+<a href="/swipp"><img class="game-teaser" src="/img/swipp-icon-1024x1024.png"/><span class="new-marker">NEW</span></a>
 </div>
 
 <div class="game">
