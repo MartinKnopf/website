@@ -15,7 +15,7 @@ layout: index.html
 }
 </style>
 
-# SWIPP!
+# Swipp!
 
 <div>
 <img class="teaser" src="/img/swipp-teaser.gif" alt="swipp teaser"/>
