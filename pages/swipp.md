@@ -19,7 +19,9 @@ layout: index.html
   width: 100%;
   height: 100%;
 }
-.left {
+.features {
+  width: 288px;
+  max-width: 100%;
   text-align: left;
 }
 .inverted {
@@ -38,11 +40,11 @@ layout: index.html
 <iframe src="https://www.youtube.com/embed/pQrF3NbaY8E?wmode=opaque" frameborder="0" allowfullscreen></iframe>
 </div>
 
-<div class="left">
+<div>
 Shove cubes around. Use their environment. And sometimes avoid it.
 </div>
 
-<div class="left">
+<div class="features">
 <small>/</small>&nbsp;50 handcrafted levels<br>
 <small>/</small>&nbsp;a couple of mechanics<br>
 <small>/</small>&nbsp;minimal user interface for minimal distraction<br>
@@ -50,7 +52,7 @@ Shove cubes around. Use their environment. And sometimes avoid it.
 <small>/</small>&nbsp;no ads, no in-app purchases<br>
 </div>
 
-<div class="left">
+<div>
 Coming to iOS <span class="inverted">May 21st 2020</span>
 </div>
 

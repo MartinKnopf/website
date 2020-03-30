@@ -41,6 +41,7 @@ body {
   flex: 1; // let main take all available space so footer can stick to the bottom
   margin: $margin-top auto 0 auto;
   border: 0;
+  max-width: 100%;
 
   div {
     margin: $margin-top auto 0 auto;
