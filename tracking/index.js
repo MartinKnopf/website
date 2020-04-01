@@ -9,18 +9,18 @@ let client
 
 const routes = {
   "/fltbttn.js": async (req, query, res) => {
-    return await store('impressions', { when: Date.now().toString() })
+    end(res, await store('impressions', { when: Date.now().toString() }))
   },
   
   "/trackvmod": async (req, query, res) => {
-    return await store('vmod', { when: Date.now().toString() })
+    end(res, await store('vmod', { when: Date.now().toString() }))
   },
   
   "/t": async (req, query, res) => {
     if(query.app) {
-      return await store('apps', { app: query.app, when: Date.now().toString() })
+      end(res, await store('apps', { app: query.app, when: Date.now().toString() }))
     } else {
-      return '-4'
+      end(res, '-4')
     }
   },
   
@@ -32,18 +32,18 @@ const routes = {
   // store uid for an app
   "/uid": async (req, query, res) => {
     if(query.app && query.uid) {
-      return await store('apps', { app: query.app, uid: query.uid, when: Date.now().toString() })
+      end(res, await store('apps', { app: query.app, uid: query.uid, when: Date.now().toString() }))
     } else {
-      return '-4'
+      end(res, '-4')
     }
   },
 
   // get number of distinct user ids for a specific app
   "/uids": async (req, query, res) => {
     if(query.app) {
-      return await getUidCount('apps', query.app, res)
+      end(res, await getUidCount('apps', query.app, res))
     } else {
-      return '-4'
+      end(res, '-4')
     }
   }
 }
@@ -72,16 +72,23 @@ let getUidCount = async (coll, app) => {
   }
 }
 
-let handleRequest = async (req, res) => {
-  res.end('abc')
+let end = (response, result) => {
+  if(client) client.close()
+  response.end(result)
 }
 
-let asnycify = fn => async (req, res) {
+module.exports = (req, res) => {
   try {
-    return await fn(req, res)
+    const route = parse(req.url).pathname
+
+    if(routes[route]) {
+      const { query } = parse(req.url, true) || {}
+
+      routes[route](req, query, res)
+    } else {
+      res.end('0')
+    }
   } catch(err) {
     res.end(err)
   }
 }
-
-module.exports = asnycify(handleRequest)
