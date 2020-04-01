@@ -65,8 +65,9 @@ let store = async (coll, row, res) => {
     result = err
   } finally {
     await mongo.close()
-    res.end(result)
   }
+  
+  return result
 }
 
 let getUidCount = async (coll, app, res) => {
@@ -79,11 +80,9 @@ let getUidCount = async (coll, app, res) => {
       mongo.close()
     })
   } catch(err) {
-    mongo.close()
+    await mongo.close()
     res.end(err)
   }
-
-  return result
 }
 
 module.exports = async (req, res) => {
