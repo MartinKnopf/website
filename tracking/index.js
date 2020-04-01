@@ -76,9 +76,9 @@ let getUidCount = async (collName, app, res) => {
     const db = mongo.db(DBNAME)
     const coll = db.collection(collName)
 
-    coll.distinct('uid', {app: app}).then((docs) => {
-      res.end('' + docs.length)
-    })
+    const docs = await coll.distinct('uid', {app: app})
+
+    res.end('' + docs.length)
   } catch(err) {
     res.end(err)
   } finally {
