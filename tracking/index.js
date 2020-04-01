@@ -76,13 +76,13 @@ module.exports = (req, res) => {
         })
         .catch(err => {
           if(client) client.close()
-          res.end(err)
+          res.end(err.toString())
         })
     } else {
       res.end('0')
     }
   } catch(err) {
     if(client) client.close()
-    res.end(err)
+    res.end(err.toString())
   }
 }
