@@ -34,7 +34,8 @@ const routes = {
     const { query } = parse(req.url, true)
     
     if(query && query.app && query.uid) {
-      await store('apps', { app: query.app, uid: query.uid, when: Date.now().toString() }, res)
+      const result = await store('apps', { app: query.app, uid: query.uid, when: Date.now().toString() })
+      res.end(result)
     } else {
       res.end('-4')
     }
