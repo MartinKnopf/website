@@ -45,8 +45,7 @@ const routes = {
     const { query } = parse(req.url, true)
     
     if(query && query.app) {
-      const count = await getUidCount('apps', query.app, res)
-      res.end('' + count)
+      await getUidCount('apps', query.app, res)
     } else {
       res.end('-4')
     }
@@ -62,7 +61,7 @@ let store = async (coll, row, res) => {
     await db.collection(coll).insertOne(row)
 
     result = '1'
-  } catch(err){
+  } catch(err) {
     result = err
   } finally {
     await mongo.close()
@@ -70,22 +69,21 @@ let store = async (coll, row, res) => {
   }
 }
 
-let getUidCount = async (coll, app) => {
-  let result
-
+let getUidCount = async (coll, app, res) => {
   try {
     await mongo.connect()
 
     const db = mongo.db(DBNAME)
-    const docs = await db.collection(coll).distinct('uid', {app: app})
-
-    result = docs.length
+    db.collection(coll).distinct('uid', {app: app}).then((docs) => {
+      res.end('' + docs.length)
+      mongo.close()
+    })
   } catch(err) {
-    result = err
-  } finally {
     mongo.close()
-    return result
+    res.end(err)
   }
+
+  return result
 }
 
 module.exports = async (req, res) => {
