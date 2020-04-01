@@ -8,40 +8,40 @@ const uuidv1 = require('uuid/v1')
 let client
 
 const routes = {
-  "/fltbttn.js": async (req, query, res) => {
-    return await store('impressions', { when: Date.now().toString() })
+  "/fltbttn.js": async (req, res) => {
+    return store('impressions', { when: Date.now().toString() })
   },
   
-  "/trackvmod": async (req, query, res) => {
-    return await store('vmod', { when: Date.now().toString() })
+  "/trackvmod": async (req, res) => {
+    return store('vmod', { when: Date.now().toString() })
   },
   
-  "/t": async (req, query, res) => {
-    if(query.app) {
-      return await store('apps', { app: query.app, when: Date.now().toString() })
+  "/t": async (req, res) => {
+    if(req.query.app) {
+      return store('apps', { app: req.query.app, when: Date.now().toString() })
     } else {
       return '-4'
     }
   },
   
   // get a new timestamp based user id
-  "/newuid": async (req, query, res) => {
+  "/newuid": async (req, res) => {
     return uuidv1()
   },
   
   // store uid for an app
-  "/uid": async (req, query, res) => {
-    if(query.app && query.uid) {
-      return await store('apps', { app: query.app, uid: query.uid, when: Date.now().toString() })
+  "/uid": async (req, res) => {
+    if(req.query.app && req.query.uid) {
+      return store('apps', { app: req.query.app, uid: req.query.uid, when: Date.now().toString() })
     } else {
       return '-4'
     }
   },
 
   // get number of distinct user ids for a specific app
-  "/uids": async (req, query, res) => {
-    if(query.app) {
-      return await getUidCount('apps', query.app, res)
+  "/uids": async (req, res) => {
+    if(req.query.app) {
+      return getUidCount('apps', req.query.app, res)
     } else {
       return '-4'
     }
@@ -49,27 +49,19 @@ const routes = {
 }
 
 let store = async (coll, row) => {
-  try {
-    client = await mongo.connect(DBURI)
-    const db = client.db(DBNAME)
-    await db.collection(coll).insertOne(row)
+  client = await mongo.connect(DBURI)
+  const db = client.db(DBNAME)
+  await db.collection(coll).insertOne(row)
 
-    return '1'
-  } catch(err) {
-    return err
-  }
+  return '1'
 }
 
 let getUidCount = async (coll, app) => {
-  try {
-    client = await mongo.connect(DBURI)
-    const db = client.db(DBNAME)
-    const docs = await db.collection(coll).distinct('uid', {app: app})
-    
-    return docs.length
-  } catch(err) {
-    return err
-  }
+  client = await mongo.connect(DBURI)
+  const db = client.db(DBNAME)
+  const docs = await db.collection(coll).distinct('uid', {app: app})
+
+  return docs.length
 }
 
 module.exports = (req, res) => {
@@ -77,9 +69,7 @@ module.exports = (req, res) => {
     const route = parse(req.url).pathname
 
     if(routes[route]) {
-      const { query } = parse(req.url, true) || {}
-
-      routes[route](req, query, res)
+      routes[route](req, res)
         .then(result => {
           if(client) client.close()
           res.end(result)
