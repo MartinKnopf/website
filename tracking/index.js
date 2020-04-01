@@ -5,6 +5,8 @@ const { parse } = require('url')
 const mongo = require('mongodb').MongoClient
 const uuidv1 = require('uuid/v1')
 
+let client
+
 const routes = {
   "/fltbttn.js": async (req, res) => {
     const result = await store('impressions', { when: Date.now().toString() })
@@ -58,45 +60,36 @@ const routes = {
 }
 
 let store = async (coll, row) => {
-  let client
-  let result
-
   try {
     client = await mongo.connect(DBURI)
     const db = client.db(DBNAME)
     await db.collection(coll).insertOne(row)
 
-    result = '1'
+    return '1'
   } catch(err) {
-    result = err
+    return err
   }
-  
-  client.close()
-  return result
 }
 
 let getUidCount = async (coll, app) => {
-  let client
-  let result
-
   try {
     client = await mongo.connect(DBURI)
     const db = client.db(DBNAME)
     const docs = await db.collection(coll).distinct('uid', {app: app})
-    result = '' + docs.length
+    
+    return docs.length
   } catch(err) {
-    result = err
+    return err
   }
-
-  client.close()
-  return result
 }
 
-module.exports = (req, res) => {
+module.exports = async (req, res) => {
   const route = parse(req.url).pathname
 
   if(routes[route]) {
-    routes[route](req, res)
+    await routes[route](req, res)
+
+    if(client) client.close()
   } else {
     res.end('0')
   }
