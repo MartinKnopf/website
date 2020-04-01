@@ -91,7 +91,7 @@ module.exports = async (req, res) => {
   const route = parse(req.url).pathname
 
   if(routes[route]) {
-    routes[route](req, res)
+    await routes[route](req, res)
   } else {
     res.end('0')
   }
