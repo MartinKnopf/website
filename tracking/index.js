@@ -1,9 +1,9 @@
-const { parse } = require('url')
-const MongoClient = require('mongodb').MongoClient
-const uuidv1 = require('uuid/v1')
-
 const DBURI = process.env.DBURI
 const DBNAME = 'tracking'
+
+const { parse } = require('url')
+const mongo = require('mongodb').MongoClient(DBURI)
+const uuidv1 = require('uuid/v1')
 
 const routes = {
   "/fltbttn.js": (req, res) => {
@@ -40,17 +40,6 @@ const routes = {
     }
   },
 
-  // get number of documents with specific app
-  "/stats": (req, res) => {
-    const { query } = parse(req.url, true)
-    
-    if(query && query.app) {
-      getAppCount('apps', query.app, res)
-    } else {
-      res.end('-4')
-    }
-  },
-
   // get number of distinct user ids for a specific app
   "/uids": (req, res) => {
     const { query } = parse(req.url, true)
@@ -63,72 +52,37 @@ const routes = {
   }
 }
 
-let store = (collName, row, res) => {
+let store = async (collName, row, res) => {
   try {
-    MongoClient.connect(DBURI, (err, client) => {
-      try {
-        if(err) throw err
+    await mongo.connect()
 
-        const db = client.db(DBNAME)
-        const collection = db.collection(collName)
+    const db = mongo.db(DBNAME)
+    const coll = db.collection(collName)
 
-        collection.insertOne(row, (err, result) => {
-          if(err) throw err
+    await coll.insertOne(row)
 
-          try {
-            client.close()
-
-            res.end('1')
-          } catch(e) {
-            res.end('-3')
-          }
-        });
-      } catch(e) {
-        res.end('-2')
-      }
-    });
-  } catch(e) {
-    res.end('-1')
+    res.end('1')
+  } catch(err){
+    res.end(err)
+  } finally {
+    await mongo.close()
   }
 }
 
-let getAppCount = (collName, app, res) => {
+let getUidCount = async (collName, app, res) => {
   try {
-    MongoClient.connect(DBURI, (err, client) => {
-      try {
-        if(err) throw err
+    await mongo.connect()
 
-        const db = client.db(DBNAME)
-        const collection = db.collection(collName)
-        collection.find({app: app}).count().then((count) => {
-          res.end('' + count)
-        })
-      } catch(e) {
-        res.end('-2')
-      }
-    });
-  } catch(e) {
-    res.end('-1')
-  }
-}
+    const db = mongo.db(DBNAME)
+    const coll = db.collection(collName)
 
-let getUidCount = (collName, app, res) => {
-  try {
-    MongoClient.connect(DBURI, (err, client) => {
-      try {
-        if(err) throw err
-
-        const db = client.db(DBNAME)
-        const collection = db.collection(collName)
-        collection.distinct('uid', {app: app}).then((docs) => {
-          res.end('' + docs.length)
-        })
-      } catch(e) {
-        res.end('-2')
-      }
-    });
-  } catch(e) {
-    res.end('-1')
+    coll.distinct('uid', {app: app}).then((docs) => {
+      res.end('' + docs.length)
+    })
+  } catch(err) {
+    res.end(err)
+  } finally {
+    mongo.close()
   }
 }
 
