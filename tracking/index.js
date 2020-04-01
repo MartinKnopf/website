@@ -9,18 +9,18 @@ let client
 
 const routes = {
   "/fltbttn.js": async (req, query, res) => {
-    end(res, await store('impressions', { when: Date.now().toString() }))
+    return await store('impressions', { when: Date.now().toString() })
   },
   
   "/trackvmod": async (req, query, res) => {
-    end(res, await store('vmod', { when: Date.now().toString() }))
+    return await store('vmod', { when: Date.now().toString() })
   },
   
   "/t": async (req, query, res) => {
     if(query.app) {
-      end(res, await store('apps', { app: query.app, when: Date.now().toString() }))
+      return await store('apps', { app: query.app, when: Date.now().toString() })
     } else {
-      end(res, '-4')
+      return '-4'
     }
   },
   
@@ -32,18 +32,18 @@ const routes = {
   // store uid for an app
   "/uid": async (req, query, res) => {
     if(query.app && query.uid) {
-      end(res, await store('apps', { app: query.app, uid: query.uid, when: Date.now().toString() }))
+      return await store('apps', { app: query.app, uid: query.uid, when: Date.now().toString() })
     } else {
-      end(res, '-4')
+      return '-4'
     }
   },
 
   // get number of distinct user ids for a specific app
   "/uids": async (req, query, res) => {
     if(query.app) {
-      end(res, await getUidCount('apps', query.app, res))
+      return await getUidCount('apps', query.app, res)
     } else {
-      end(res, '-4')
+      return '-4'
     }
   }
 }
@@ -72,11 +72,6 @@ let getUidCount = async (coll, app) => {
   }
 }
 
-let end = (response, result) => {
-  if(client) client.close()
-  response.end(result)
-}
-
 module.exports = (req, res) => {
   try {
     const route = parse(req.url).pathname
@@ -85,10 +80,19 @@ module.exports = (req, res) => {
       const { query } = parse(req.url, true) || {}
 
       routes[route](req, query, res)
+        .then(result => {
+          if(client) client.close()
+          res.end(result)
+        })
+        .catch(err => {
+          if(client) client.close()
+          res.end(err)
+        })
     } else {
       res.end('0')
     }
   } catch(err) {
+    if(client) client.close()
     res.end(err)
   }
 }
