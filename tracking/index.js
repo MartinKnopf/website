@@ -73,19 +73,7 @@ let getUidCount = async (coll, app) => {
 }
 
 let handleRequest = async (req, res) => {
-  const route = parse(req.url).pathname
-
-  if(routes[route]) {
-    const { query } = parse(req.url, true) || {}
-
-    const result = await routes[route](req, query, res)
-
-    if(client) client.close()
-
-    res.end(result)
-  } else {
-    res.end('0')
-  }
+  res.end('abc')
 }
 
 let asnycify = fn => async (req, res) {
