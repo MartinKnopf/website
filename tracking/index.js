@@ -2,7 +2,7 @@ const DBURI = process.env.DBURI
 const DBNAME = 'tracking'
 
 const { parse } = require('url')
-const mongo = require('mongodb').MongoClient(DBURI)
+const mongo = require('mongodb').MongoClient
 const uuidv1 = require('uuid/v1')
 
 const routes = {
@@ -53,34 +53,34 @@ const routes = {
 }
 
 let store = async (coll, row, res) => {
+  let client
   let result = ''
 
   try {
-    await mongo.connect()
-    const db = mongo.db(DBNAME)
+    client = await mongo.connect(DBURI)
+    const db = client.db(DBNAME)
     await db.collection(coll).insertOne(row)
 
     result = '1'
   } catch(err) {
     result = err
-  } finally {
-    await mongo.close()
   }
   
+  client.close()
   res.end(result)
 }
 
 let getUidCount = async (coll, app, res) => {
-  try {
-    await mongo.connect()
+  let client
 
-    const db = mongo.db(DBNAME)
+  try {
+    client = await mongo.connect(DBURI)
+    const db = client.db(DBNAME)
     db.collection(coll).distinct('uid', {app: app}).then((docs) => {
+      client.close()
       res.end('' + docs.length)
-      mongo.close()
     })
   } catch(err) {
-    await mongo.close()
     res.end(err)
   }
 }
