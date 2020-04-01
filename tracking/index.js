@@ -53,6 +53,8 @@ const routes = {
 }
 
 let store = async (collName, row, res) => {
+  let result = ''
+
   try {
     await mongo.connect()
 
@@ -61,15 +63,18 @@ let store = async (collName, row, res) => {
 
     await coll.insertOne(row)
 
-    res.end('1')
+    result = '1'
   } catch(err){
-    res.end(err)
+    result = err
   } finally {
     await mongo.close()
+    res.end(result)
   }
 }
 
 let getUidCount = async (collName, app, res) => {
+  let result = ''
+
   try {
     await mongo.connect()
 
@@ -78,11 +83,12 @@ let getUidCount = async (collName, app, res) => {
 
     const docs = await coll.distinct('uid', {app: app})
 
-    res.end('' + docs.length)
+    result = '' + docs.length
   } catch(err) {
-    res.end(err)
+    result = err
   } finally {
     mongo.close()
+    res.end(result)
   }
 }
 
