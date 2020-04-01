@@ -64,25 +64,24 @@ let getUidCount = async (coll, app) => {
   return docs.length
 }
 
+let send = response => result => {
+  if(client) client.close()
+  response.end(result.toString())
+}
+
 module.exports = (req, res) => {
   try {
-    const route = parse(req.url).pathname
+    const route = routes[parse(req.url).pathname]
 
-    if(routes[route]) {
-      routes[route](req, res)
-        .then(result => {
-          if(client) client.close()
-          res.end('' + result)
-        })
-        .catch(err => {
-          if(client) client.close()
-          res.end(err.toString())
-        })
-    } else {
+    if(!route) {
       res.end('0')
+      return
     }
+
+    route(req, res)
+      .then(send(res))
+      .catch(send(res))
   } catch(err) {
-    if(client) client.close()
-    res.end(err.toString())
+    send(res)(err)
   }
 }
