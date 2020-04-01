@@ -8,53 +8,42 @@ const uuidv1 = require('uuid/v1')
 let client
 
 const routes = {
-  "/fltbttn.js": async (req, res) => {
-    const result = await store('impressions', { when: Date.now().toString() })
-    res.end(result)
+  "/fltbttn.js": async (req, query, res) => {
+    return await store('impressions', { when: Date.now().toString() })
   },
   
-  "/trackvmod": async (req, res) => {
-    const result = await store('vmod', { when: Date.now().toString() })
-    res.end(result)
+  "/trackvmod": async (req, query, res) => {
+    return await store('vmod', { when: Date.now().toString() })
   },
   
-  "/t": async (req, res) => {
-    const { query } = parse(req.url, true)
-    
-    if(query && query.app) {
-      const result = await store('apps', { app: query.app, when: Date.now().toString() })
-      res.end(result)
+  "/t": async (req, query, res) => {
+    if(query.app) {
+      return await store('apps', { app: query.app, when: Date.now().toString() })
     } else {
-      res.end('-4')
+      return '-4'
     }
   },
   
   // get a new timestamp based user id
-  "/newuid": (req, res) => {
-    res.end(uuidv1())
+  "/newuid": async (req, query, res) => {
+    return uuidv1()
   },
   
   // store uid for an app
-  "/uid": async (req, res) => {
-    const { query } = parse(req.url, true)
-    
-    if(query && query.app && query.uid) {
-      const result = await store('apps', { app: query.app, uid: query.uid, when: Date.now().toString() })
-      res.end(result)
+  "/uid": async (req, query, res) => {
+    if(query.app && query.uid) {
+      return await store('apps', { app: query.app, uid: query.uid, when: Date.now().toString() })
     } else {
-      res.end('-4')
+      return '-4'
     }
   },
 
   // get number of distinct user ids for a specific app
-  "/uids": async (req, res) => {
-    const { query } = parse(req.url, true)
-    
-    if(query && query.app) {
-      const result = await getUidCount('apps', query.app, res)
-      res.end(result)
+  "/uids": async (req, query, res) => {
+    if(query.app) {
+      return await getUidCount('apps', query.app, res)
     } else {
-      res.end('-4')
+      return '-4'
     }
   }
 }
@@ -87,9 +76,13 @@ module.exports = async (req, res) => {
   const route = parse(req.url).pathname
 
   if(routes[route]) {
-    await routes[route](req, res)
+    const { query } = parse(req.url, true) || {}
+    
+    const result = await routes[route](req, query, res)
 
     if(client) client.close()
+
+    res.end(result)
   } else {
     res.end('0')
   }
