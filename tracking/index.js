@@ -88,10 +88,12 @@ let handleRequest = async (req, res) => {
   }
 }
 
-module.exports = (req, res) => {
+let asnycify = fn => async (req, res) {
   try {
-    handleRequest(req, res)
+    return await fn(req, res)
   } catch(err) {
     res.end(err)
   }
 }
+
+module.exports = asnycify(handleRequest)
