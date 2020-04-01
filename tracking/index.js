@@ -6,19 +6,22 @@ const mongo = require('mongodb').MongoClient
 const uuidv1 = require('uuid/v1')
 
 const routes = {
-  "/fltbttn.js": (req, res) => {
-    store('impressions', { when: Date.now().toString() }, res)
+  "/fltbttn.js": async (req, res) => {
+    const result = await store('impressions', { when: Date.now().toString() })
+    res.end(result)
   },
   
-  "/trackvmod": (req, res) => {
-    store('vmod', { when: Date.now().toString() }, res)
+  "/trackvmod": async (req, res) => {
+    const result = await store('vmod', { when: Date.now().toString() })
+    res.end(result)
   },
   
-  "/t": (req, res) => {
+  "/t": async (req, res) => {
     const { query } = parse(req.url, true)
     
     if(query && query.app) {
-      store('apps', { app: query.app, when: Date.now().toString() }, res)
+      const result = await store('apps', { app: query.app, when: Date.now().toString() })
+      res.end(result)
     } else {
       res.end('-4')
     }
@@ -30,29 +33,31 @@ const routes = {
   },
   
   // store uid for an app
-  "/uid": (req, res) => {
+  "/uid": async (req, res) => {
     const { query } = parse(req.url, true)
     
     if(query && query.app && query.uid) {
-      store('apps', { app: query.app, uid: query.uid, when: Date.now().toString() }, res)
+      const result = await store('apps', { app: query.app, uid: query.uid, when: Date.now().toString() })
+      res.end(result)
     } else {
       res.end('-4')
     }
   },
 
   // get number of distinct user ids for a specific app
-  "/uids": (req, res) => {
+  "/uids": async (req, res) => {
     const { query } = parse(req.url, true)
     
     if(query && query.app) {
-      getUidCount('apps', query.app, res)
+      const result = await getUidCount('apps', query.app, res)
+      res.end(result)
     } else {
       res.end('-4')
     }
   }
 }
 
-let store = async (coll, row, res) => {
+let store = async (coll, row) => {
   let client
   let result
 
@@ -67,10 +72,10 @@ let store = async (coll, row, res) => {
   }
   
   client.close()
-  res.end(result)
+  return result
 }
 
-let getUidCount = async (coll, app, res) => {
+let getUidCount = async (coll, app) => {
   let client
   let result
 
@@ -84,7 +89,7 @@ let getUidCount = async (coll, app, res) => {
   }
 
   client.close()
-  res.end(result)
+  return result
 }
 
 module.exports = (req, res) => {
