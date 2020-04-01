@@ -72,7 +72,7 @@ module.exports = (req, res) => {
       routes[route](req, res)
         .then(result => {
           if(client) client.close()
-          res.end(result)
+          res.end('' + result)
         })
         .catch(err => {
           if(client) client.close()
