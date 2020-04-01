@@ -72,21 +72,25 @@ let getUidCount = async (coll, app) => {
   }
 }
 
-module.exports = async (req, res) => {
+let handleRequest = async (req, res) => {
+  const route = parse(req.url).pathname
+
+  if(routes[route]) {
+    const { query } = parse(req.url, true) || {}
+
+    const result = await routes[route](req, query, res)
+
+    if(client) client.close()
+
+    res.end(result)
+  } else {
+    res.end('0')
+  }
+}
+
+module.exports = (req, res) => {
   try {
-    const route = parse(req.url).pathname
-
-    if(routes[route]) {
-      const { query } = parse(req.url, true) || {}
-
-      const result = await routes[route](req, query, res)
-
-      if(client) client.close()
-
-      res.end(result)
-    } else {
-      res.end('0')
-    }
+    handleRequest(req, res)
   } catch(err) {
     res.end(err)
   }
