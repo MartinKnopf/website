@@ -4,6 +4,7 @@ layout: index.html
 <div class="main">
 <div>Boolitaire installations:&nbsp;<span id="boolitaire-installation"></span></div>
 <div>Swipp! installations:&nbsp;<span id="swipp!-installation"></span></div>
+<div>Triple Slice installations:&nbsp;<span id="triple-slice-installation"></span></div>
 </div>
 
 <script>
@@ -17,4 +18,5 @@ layout: index.html
   }
   request('boolitaire-installation')
   request('swipp!-installation')
+  request('triple-slice-installation')
 </script>
