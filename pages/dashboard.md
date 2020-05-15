@@ -12,11 +12,16 @@ layout: index.html
     const req = new XMLHttpRequest()
     req.open("GET", `https://flatbutton.co/uids?app=${app}`)
     req.send()
-    req.onreadystatechange = (e) => {
-      document.getElementById(app).innerText = req.responseText
-    }
+    document.getElementById(app).innerText = '...'
+    req.onreadystatechange = e => document.getElementById(app).innerText = req.responseText
   }
-  request('boolitaire-installation')
-  request('swipp!-installation')
-  request('triple-slice-installation')
+  const repeat = fn => {
+    try { fn() } catch(ignore) { }
+    setInterval(() => {
+      try { fn() } catch(ignore) { }
+    }, 30000)
+  }
+  repeat(() => request('boolitaire-installation'))
+  repeat(() => request('swipp!-installation'))
+  repeat(() => request('triple-slice-installation'))
 </script>
