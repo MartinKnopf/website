@@ -20,7 +20,7 @@ layout: index.html
   height: 100%;
 }
 .features {
-  width: 288px;
+  width: 226px;
   max-width: 100%;
   text-align: left;
 }
