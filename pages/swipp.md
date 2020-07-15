@@ -52,10 +52,6 @@ Shove cubes around. Use their environment. And sometimes avoid it.
 <small>/</small>&nbsp;no ads, no in-app purchases<br>
 </div>
 
-<div>
-Coming to iOS <span class="inverted">May 21st 2020</span>
-</div>
-
-<div><a href="https://itunes.apple.com/app/swipp/id1375768062"><img class="appstore" src="/img/appstore-preorder.svg" alt="preorder swipp"/></a></div>
+<div><a href="https://itunes.apple.com/app/swipp/id1375768062"><img class="appstore" src="/img/appstore.svg" alt="buy swipp"/></a></div>
 
 <!--<div><a href="https://itunes.apple.com/app/swipp/id1375768062"><img class="appstore" src="/img/appstore.svg" alt="buy swipp"/></a></div>-->
