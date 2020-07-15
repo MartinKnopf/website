@@ -5,7 +5,7 @@ tracking: true
 ---
 <div class="games">
 <div class="game">
-<a href="https://numsol.vercel.app"><img class="game-teaser" src="/img/numsol-icon-1024x1024.png" alt="Numsol"/><span class="new-marker">NEW</span></a>
+<a href="/numsol"><img class="game-teaser" src="/img/numsol-icon-1024x1024.png" alt="Numsol"/><span class="new-marker">NEW</span></a>
 </div>
 
 <div class="game">

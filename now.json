@@ -24,6 +24,7 @@
 		{ "src": "/uid", "dest": "/tracking" },
 		{ "src": "/uids", "dest": "/tracking" },
 		{ "src": "/stats", "dest": "/tracking" },
+		{ "src": "/numsol/privacy", "dest": "/numsol-privacy" },
 		{ "src": "/(.*)", "dest": "/$1"}
 	]
 }
