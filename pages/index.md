@@ -13,15 +13,11 @@ tracking: true
 </div>
 
 <div class="game">
-<a href="https://boolitaire.com"><img class="game-teaser" src="/img/boolitaire-icon-144x144.png"/></a>
+<a href="https://boolitaire.com"><img class="game-teaser" alt="Boolitaire" src="/img/boolitaire-icon-144x144.png"/></a>
 </div>
 
 <div class="game">
-<a href="https://vmod.io"><img class="game-teaser" src="/img/vmod-icon-144x144.png"/></a>
-</div>
-
-<div class="game">
-<a href="https://itunes.apple.com/app/pocket-snap/id1252302313"><img class="game-teaser" src="/img/pocketsnap-icon-144x144.png"/></a>
+<a href="https://vmod.io"><img class="game-teaser" alt="VMOD" src="/img/vmod-icon-144x144.png"/></a>
 </div>
 
 <div class="game">
@@ -29,15 +25,19 @@ tracking: true
 </div>
 
 <div class="game">
-<a href="https://itunes.apple.com/app/sliding-down/id1180040010"><img class="game-teaser" src="/img/slidingdown-icon-512x512.png"/></a>
-</div>
-
-<div class="game">
 <a href="https://itunes.apple.com/app/amoebae/id1152536305"><img class="game-teaser" src="/img/amoebae-icon_144x144.png"/></a>
 </div>
 
 <div class="game">
-<a href="https://itunes.apple.com/app/flat-jump/id1128837742"><img class="game-teaser" src="/img/flatjump-icon_144x144.png"/></a>
+<img class="game-teaser archived" src="/img/pocketsnap-icon-144x144.png"/>
+</div>
+
+<div class="game">
+<img class="game-teaser archived" src="/img/slidingdown-icon-512x512.png"/>
+</div>
+
+<div class="game">
+<img class="game-teaser archived" src="/img/flatjump-icon_144x144.png"/>
 </div>
 
 <div class="game">

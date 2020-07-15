@@ -45,6 +45,10 @@ html {
             margin-bottom: -6px;
           }
 
+          .archived {
+            filter: grayscale(1);
+          }
+
 					.game-placeholder {
             border-radius: 13%;
             width: 100%;
