@@ -32,6 +32,9 @@ layout: index.html
   width: 180px;
   max-width: 100%;
 }
+.numsol-privacy-link {
+  text-decoration: underline;
+}
 </style>
 
 # NUMSOL
@@ -58,4 +61,4 @@ Numsol is a relaxing combination of 2048 and Solitaire. Clear the board by mergi
 
 <div><a href="https://itunes.apple.com/app/numsol/id1516677757"><img class="appstore" src="/img/appstore.svg" alt="pre-order numsol"/></a></div>
 
-<div><a href="/numsol/privacy">Numsol Privacy Policy</a></div>
+<div><a class="numsol-privacy-link" href="/numsol/privacy">Numsol Privacy Policy</a></div>
