@@ -5,6 +5,7 @@ layout: index.html
 <div>Boolitaire installations:&nbsp;<span id="boolitaire-installation"></span></div>
 <div>Swipp! installations:&nbsp;<span id="swipp!-installation"></span></div>
 <div>Triple Slice installations:&nbsp;<span id="triple-slice-installation"></span></div>
+<div>Numsol installations:&nbsp;<span id="numsol-installation"></span></div>
 </div>
 
 <script>
@@ -24,4 +25,5 @@ layout: index.html
   repeat(() => request('boolitaire-installation'))
   repeat(() => request('swipp!-installation'))
   repeat(() => request('triple-slice-installation'))
+  repeat(() => request('numsol-installation'))
 </script>
