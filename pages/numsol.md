@@ -57,3 +57,5 @@ Numsol is a relaxing combination of 2048 and Solitaire. Clear the board by mergi
 </div>
 
 <div><a href="https://itunes.apple.com/app/numsol/id1516677757"><img class="appstore" src="/img/appstore.svg" alt="pre-order numsol"/></a></div>
+
+<div><a href="/numsol/privacy">Numsol Privacy Policy</a></div>
