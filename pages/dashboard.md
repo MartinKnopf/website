@@ -7,14 +7,14 @@ margin-right: 10px
 }
 </style>
 <div class="main">
-<div><span class="delete-link" onclick="clear('boolitaire-installation'); return false;">x</span>Boolitaire installations:&nbsp;<span id="boolitaire-installation"></span></div>
-<div><span class="delete-link" onclick="clear('swipp!-installation'); return false;">x</span>Swipp! installations:&nbsp;<span id="swipp!-installation"></span></div>
-<div><span class="delete-link" onclick="clear('triple-installation'); return false;">x</span>Triple Slice installations:&nbsp;<span id="triple-slice-installation"></span></div>
-<div><span class="delete-link" onclick="clear('numsol-installation'); return false;">x</span>Numsol installations:&nbsp;<span id="numsol-installation"></span></div>
+<div><span class="delete-link" onclick="window.deleteUids('boolitaire-installation')">x</span>Boolitaire installations:&nbsp;<span id="boolitaire-installation"></span></div>
+<div><span class="delete-link" onclick="window.deleteUids('swipp!-installation')">x</span>Swipp! installations:&nbsp;<span id="swipp!-installation"></span></div>
+<div><span class="delete-link" onclick="window.deleteUids('triple-installation')">x</span>Triple Slice installations:&nbsp;<span id="triple-slice-installation"></span></div>
+<div><span class="delete-link" onclick="window.deleteUids('numsol-installation')">x</span>Numsol installations:&nbsp;<span id="numsol-installation"></span></div>
 </div>
 
 <script>
-  const clear = (app) => {
+  window.deleteUids = (app) => {
     const req = new XMLHttpRequest()
     req.open("GET", `https://flatbutton.co/deleteuids?app=${app}`)
     req.send()
