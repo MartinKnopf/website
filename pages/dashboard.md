@@ -8,7 +8,7 @@ layout: index.html
 <div>swipp!-installations:&nbsp;<span id="swipp!-installation"></span></div>
 <div>triple-slice-installations:&nbsp;<span id="triple-slice-installation"></span></div>
 <div>numsol-installations:&nbsp;<span id="numsol-installation"></span></div>
-<div><input name="to-delete" type="text"><button id="delete-button" onclick="window.deleteUids()">delete</button>
+<div><input id="to-delete" type="text"><button id="delete-button" onclick="window.deleteUids()">delete</button>
 </div>
 
 <script>
