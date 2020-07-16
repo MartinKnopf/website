@@ -14,7 +14,7 @@ margin-right: 10px
 </div>
 
 <script>
-  const clear(app) => {
+  const clear = (app) => {
     const req = new XMLHttpRequest()
     req.open("GET", `https://flatbutton.co/uids?app=${app}`)
     req.send()
