@@ -41,7 +41,16 @@ const routes = {
   // get number of distinct user ids for a specific app
   "/uids": async (req, res) => {
     if(req.query.app) {
-      return getUidCount('apps', req.query.app, res)
+      return getUidCount('apps', req.query.app)
+    } else {
+      return '-4'
+    }
+  },
+  
+  // remove all user ids for a specific app
+  "/deleteuids": async (req, res) => {
+    if(req.query.app) {
+      return deleteUids('apps', req.query.app)
     } else {
       return '-4'
     }
@@ -62,6 +71,14 @@ let getUidCount = async (coll, app) => {
   const docs = await db.collection(coll).distinct('uid', {app: app})
 
   return docs.length
+}
+
+let deleteUids = async (coll, app) => {
+  client = await mongo.connect(DBURI)
+  const db = client.db(DBNAME)
+  await db.collection(coll).deleteMany({ app: app })
+  
+  return '1'
 }
 
 let send = response => result => {
