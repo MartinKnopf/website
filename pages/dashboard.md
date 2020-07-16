@@ -1,14 +1,25 @@
 ---
 layout: index.html
 ---
+<style>
+.delete-link {
+margin-right: 10px
+}
+</style>
 <div class="main">
-<div>Boolitaire installations:&nbsp;<span id="boolitaire-installation"></span></div>
-<div>Swipp! installations:&nbsp;<span id="swipp!-installation"></span></div>
-<div>Triple Slice installations:&nbsp;<span id="triple-slice-installation"></span></div>
-<div>Numsol installations:&nbsp;<span id="numsol-installation"></span></div>
+<div><span class="delete-link" onclick="clear(boolitaire-installation)">x</span>Boolitaire installations:&nbsp;<span id="boolitaire-installation"></span></div>
+<div><span class="delete-link" onclick="clear(swipp!-installation)">x</span>Swipp! installations:&nbsp;<span id="swipp!-installation"></span></div>
+<div><span class="delete-link" onclick="clear(triple-installation)">x</span>Triple Slice installations:&nbsp;<span id="triple-slice-installation"></span></div>
+<div><span class="delete-link" onclick="clear(numsol-installation)">x</span>Numsol installations:&nbsp;<span id="numsol-installation"></span></div>
 </div>
 
 <script>
+  const clear(app) => {
+    const req = new XMLHttpRequest()
+    req.open("GET", `https://flatbutton.co/uids?app=${app}`)
+    req.send()
+    req.onreadystatechange = e => request(app)
+  }
   const request = (app) => {
     const req = new XMLHttpRequest()
     req.open("GET", `https://flatbutton.co/uids?app=${app}`)
