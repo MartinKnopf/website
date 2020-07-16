@@ -4,10 +4,10 @@ layout: index.html
 <style>
 </style>
 <div class="main">
-<div>boolitaire-installations:&nbsp;<span id="boolitaire-installation"></span></div>
-<div>swipp!-installations:&nbsp;<span id="swipp!-installation"></span></div>
-<div>triple-slice-installations:&nbsp;<span id="triple-slice-installation"></span></div>
-<div>numsol-installations:&nbsp;<span id="numsol-installation"></span></div>
+<div>boolitaire-installation:&nbsp;<span id="boolitaire-installation"></span></div>
+<div>swipp!-installation:&nbsp;<span id="swipp!-installation"></span></div>
+<div>triple-slice-installation:&nbsp;<span id="triple-slice-installation"></span></div>
+<div>numsol-installation:&nbsp;<span id="numsol-installation"></span></div>
 <div><input id="to-delete" type="text"><button id="delete-button" onclick="window.deleteUids()">delete</button>
 </div>
 
