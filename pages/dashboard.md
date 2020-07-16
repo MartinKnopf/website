@@ -2,19 +2,19 @@
 layout: index.html
 ---
 <style>
-.delete-link {
-margin-right: 10px
-}
 </style>
 <div class="main">
-<div><span class="delete-link" onclick="window.deleteUids('boolitaire-installation')">x</span>Boolitaire installations:&nbsp;<span id="boolitaire-installation"></span></div>
-<div><span class="delete-link" onclick="window.deleteUids('swipp!-installation')">x</span>Swipp! installations:&nbsp;<span id="swipp!-installation"></span></div>
-<div><span class="delete-link" onclick="window.deleteUids('triple-installation')">x</span>Triple Slice installations:&nbsp;<span id="triple-slice-installation"></span></div>
-<div><span class="delete-link" onclick="window.deleteUids('numsol-installation')">x</span>Numsol installations:&nbsp;<span id="numsol-installation"></span></div>
+<div>boolitaire-installations:&nbsp;<span id="boolitaire-installation"></span></div>
+<div>swipp!-installations:&nbsp;<span id="swipp!-installation"></span></div>
+<div>triple-slice-installations:&nbsp;<span id="triple-slice-installation"></span></div>
+<div>numsol-installations:&nbsp;<span id="numsol-installation"></span></div>
+<div><input name="to-delete" type="text"><button id="delete-button" onclick="window.deleteUids()">delete</button>
 </div>
 
 <script>
-  window.deleteUids = (app) => {
+  window.deleteUids = () => {
+    const app = document.getElementById('to-delete').value
+    console.log(`delete uids of app ${app}`)
     const req = new XMLHttpRequest()
     req.open("GET", `https://flatbutton.co/deleteuids?app=${app}`)
     req.send()
