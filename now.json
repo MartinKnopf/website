@@ -26,7 +26,6 @@
 		{ "src": "/deleteuids", "dest": "/tracking" },
 		{ "src": "/stats", "dest": "/tracking" },
 		{ "src": "/numsol/privacy", "dest": "/numsol-privacy" },
-		{ "src": "/2ksolitaire/privacy", "dest": "/2ksolitaire-privacy" },
 		{ "src": "/(.*)", "dest": "/$1"}
 	]
 }
