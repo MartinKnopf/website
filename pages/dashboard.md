@@ -36,5 +36,5 @@ layout: index.html
   repeat(() => request('boolitaire-installation'))
   repeat(() => request('swipp!-installation'))
   repeat(() => request('numsol-installation'))
-  repeat(() => request('2k-solitiare-installation'))
+  repeat(() => request('2k-solitaire-installation'))
 </script>
