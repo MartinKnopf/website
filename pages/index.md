@@ -5,27 +5,27 @@ tracking: true
 ---
 <div class="games">
 <div class="game">
-<a href="/numsol"><img class="game-teaser" src="/img/numsol-icon-1024x1024.png" alt="Numsol"/><span class="new-marker">NEW</span></a>
+<a href="https://apps.apple.com/us/app/numsol/id1516677757"><img class="game-teaser" src="/img/numsol-icon-1024x1024.png" alt="Numsol"/><span class="new-marker">NEW</span></a>
 </div>
 
 <div class="game">
-<a href="/swipp"><img class="game-teaser" src="/img/swipp-icon-1024x1024.png" alt="Swipp!"/></a>
+<a href="https://apps.apple.com/us/app/swipp/id1375768062"><img class="game-teaser" src="/img/swipp-icon-1024x1024.png" alt="Swipp!"/></a>
 </div>
 
 <div class="game">
-<a href="https://boolitaire.com"><img class="game-teaser" alt="Boolitaire" src="/img/boolitaire-icon-144x144.png"/></a>
+<a href="https://apps.apple.com/app/boolitaire/id1477177340"><img class="game-teaser" alt="Boolitaire" src="/img/boolitaire-icon-144x144.png"/></a>
 </div>
 
 <div class="game">
-<a href="https://vmod.io"><img class="game-teaser" alt="VMOD" src="/img/vmod-icon-144x144.png"/></a>
+<a href="https://apps.apple.com/app/vmod/id1291390392"><img class="game-teaser" alt="VMOD" src="/img/vmod-icon-144x144.png"/></a>
 </div>
 
 <div class="game">
-<a href="https://itunes.apple.com/app/shn-p/id1203525883"><img class="game-teaser" src="/img/shnip-icon_1024x1024.png"/></a>
+<a href="https://apps.apple.com/app/shn-p/id1203525883"><img class="game-teaser" src="/img/shnip-icon_1024x1024.png"/></a>
 </div>
 
 <div class="game">
-<a href="https://itunes.apple.com/app/amoebae/id1152536305"><img class="game-teaser" src="/img/amoebae-icon_144x144.png"/></a>
+<a href="https://apps.apple.com/app/amoebae/id1152536305"><img class="game-teaser" src="/img/amoebae-icon_144x144.png"/></a>
 </div>
 
 <div class="game">
