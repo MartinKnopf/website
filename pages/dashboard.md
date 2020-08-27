@@ -6,8 +6,8 @@ layout: index.html
 <div class="main">
 <div>boolitaire-installation:&nbsp;<span id="boolitaire-installation"></span></div>
 <div>swipp!-installation:&nbsp;<span id="swipp!-installation"></span></div>
-<div>triple-slice-installation:&nbsp;<span id="triple-slice-installation"></span></div>
 <div>numsol-installation:&nbsp;<span id="numsol-installation"></span></div>
+<div>2k-solitaire-installation:&nbsp;<span id="2k-solitaire-installation"></span></div>
 <div><input id="to-delete" type="text"><button id="delete-button" onclick="window.deleteUids()">delete</button>
 </div>
 
@@ -35,6 +35,6 @@ layout: index.html
   }
   repeat(() => request('boolitaire-installation'))
   repeat(() => request('swipp!-installation'))
-  repeat(() => request('triple-slice-installation'))
   repeat(() => request('numsol-installation'))
+  repeat(() => request('2k-solitaire-installation'))
 </script>
