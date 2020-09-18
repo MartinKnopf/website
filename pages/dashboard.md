@@ -7,7 +7,7 @@ layout: index.html
 <div>boolitaire-installation:&nbsp;<span id="boolitaire-installation"></span></div>
 <div>swipp!-installation:&nbsp;<span id="swipp!-installation"></span></div>
 <div>numsol-installation:&nbsp;<span id="numsol-installation"></span></div>
-<div>twin-drop:&nbsp;<span id="grabmoreads"></span></div>
+<div>grab-more-ads:&nbsp;<span id="grabmoreads"></span></div>
 <div><input id="to-delete" type="text"><button id="delete-button" onclick="window.deleteUids()">delete</button>
 </div>
 
