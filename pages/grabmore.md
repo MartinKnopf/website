@@ -1,5 +1,6 @@
 ---
 layout: grabmore.html
+mainClass: game-page
 ---
 
 <style>
@@ -43,3 +44,11 @@ layout: grabmore.html
 <div>
 Coming soon!
 </div>
+
+<script>
+  const req = new XMLHttpRequest()
+  req.open("GET", `https://flatbutton.co/uid?app=grabmoread&uid${Math.floor(Math.random() * 10000000)`)
+  req.send()
+  document.getElementById(app).innerText = '...'
+  req.onreadystatechange = e => document.getElementById(app).innerText = req.responseText
+</script>
