@@ -47,6 +47,6 @@ Coming soon!
 
 <script>
   const req = new XMLHttpRequest()
-  req.open("GET", `https://flatbutton.co/uid?app=grabmoread&uid${Math.floor(Math.random() * 10000000)}`)
+  req.open("GET", `https://flatbutton.co/uid?app=grabmoread&uid=${Math.floor(Math.random() * 10000000)}`)
   req.send()
 </script>
