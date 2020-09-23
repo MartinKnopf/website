@@ -1,5 +1,5 @@
 ---
-layout: grabmore.html
+layout: ctrtest.html
 mainClass: game-page
 ---
 
@@ -35,10 +35,10 @@ mainClass: game-page
 }
 </style>
 
-# Grab More!
+# Puddle Race
 
 <div class="trailer">
-<iframe src="https://www.youtube.com/embed/clMrC1E-VF8?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/9ZGpdtt_TII?wmode=opaque" frameborder="0" allowfullscreen></iframe>
 </div>
 
 <div>
@@ -47,6 +47,6 @@ Coming soon!
 
 <script>
   const req = new XMLHttpRequest()
-  req.open("GET", `https://flatbutton.co/uid?app=grabmoread&uid=${Math.floor(Math.random() * 10000000)}`)
+  req.open("GET", `https://flatbutton.co/uid?app=puddleracead&uid=${Math.floor(Math.random() * 10000000)}`)
   req.send()
 </script>
