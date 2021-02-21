@@ -5,7 +5,7 @@
 		{ "src": "tracking/index.js", "use": "@now/node" }
 	],
   "env": {
-    "DBURI": "@dburi"
+    "DBURI": "@dburi_prod"
   },
 	"routes": [
 		{ "src": "/(.*)", "continue": true, "headers" :
