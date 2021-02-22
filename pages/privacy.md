@@ -7,7 +7,7 @@ mainClass: walloftext
 
 This privacy policy was last updated on February 22th, 2021.
 
-I neither need nor want any personally identifiable information about you, the visitory to my website or the users of my apps. Therefore I do not collect anything like that on my own. However, my games are based on Unity §D which itself collects data from your device. Please see the privacy policy of Unity 3D:
+I neither need nor want any personally identifiable information about you, the visitory to my website or the users of my apps. Therefore I do not collect anything like that on my own. However, my games are based on Unity 3D which itself collects data from your device. Please see the privacy policy of Unity 3D:
 
 <a href="https://unity3d.com/de/legal/privacy-policy">https://unity3d.com/de/legal/privacy-policy</a>
 
