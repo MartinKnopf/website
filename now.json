@@ -4,9 +4,6 @@
 		{ "src": "package.json", "use": "@now/static-build" },
 		{ "src": "tracking/index.js", "use": "@now/node" }
 	],
-  "env": {
-    "DBURI": "@dburi_prod"
-  },
 	"routes": [
 		{ "src": "/(.*)", "continue": true, "headers" :
         { "Access-Control-Allow-Origin": "https://flatbutton.co",
