@@ -4,7 +4,7 @@ mainClass: landing-page
 tracking: true
 ---
 <div class="games">
-<game-tile name="Numsol" appId="numsol/id1516677757" icon="/img/numsol-icon-1024x1024.png" isNew="true"></game-tile>
+<game-tile name="Numsol" appId="numsol/id1516677757" icon="/img/numsol-icon-1024x1024.png" isNew="false"></game-tile>
 <game-tile name="Swipp!" appId="swipp/id1375768062" icon="/img/swipp-icon-1024x1024.png"></game-tile>
 <game-tile name="Boolitaire" appId="boolitaire/id1477177340" icon="/img/boolitaire-icon-144x144.png"></game-tile>
 <game-tile name="VMOD" appId="vmod/id1291390392" icon="/img/vmod-icon-144x144.png"></game-tile>
