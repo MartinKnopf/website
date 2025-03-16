@@ -16,7 +16,7 @@
     "lit-element": "^2.4.0"
   },
   "devDependencies": {
-    "handlebars": "^4.0.5",
+    "handlebars": "^4.7.7",
     "handlebars-intl": "^1.1.2",
     "parcel-bundler": "^1.12.4",
     "metalsmith": "^2.3.0",
